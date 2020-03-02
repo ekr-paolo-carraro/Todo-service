@@ -35,7 +35,7 @@ func NewTodoDelegate() (*model.TodoDelegate, error) {
 }
 
 func (todoDelegate PersistenceDelegate) InitData() error {
-	script, err := ioutil.ReadFile("../sql/createTodoTable.sql")
+	script, err := ioutil.ReadFile("sql/createTodoTable.sql")
 	if err != nil {
 		return fmt.Errorf("error on reading script sql: %s", err)
 	}
@@ -50,7 +50,7 @@ func (todoDelegate PersistenceDelegate) InitData() error {
 
 	result, err := todoDelegate.GetAllItems()
 	if result == nil || len(result) == 0 {
-		script, err = ioutil.ReadFile("../sql/populateTable.sql")
+		script, err = ioutil.ReadFile("sql/populateTable.sql")
 		if err != nil {
 			return fmt.Errorf("error on reading script sql: %s", err)
 		}
