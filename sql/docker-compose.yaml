@@ -1,0 +1,26 @@
+version: '3'
+services:
+  pgdbms:
+    image: postgres:11.6-alpine
+    hostname: postgres-host
+    environment:
+      - POSTGRES_USER=srvuser
+      - POSTGRES_PASSWORD=ekr
+      - POSTGRES_DB=tododb
+      - PGDATA=/var/lib/pgdata
+    volumes: 
+      - pg-data:/var/lib/pgdata
+    ports:
+      - 5432:5432
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 8081:80
+    volumes:
+      - pg-data:/var/lib/pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=paolo.carraro@ekr.it
+  
+volumes:
+  pg-data:
