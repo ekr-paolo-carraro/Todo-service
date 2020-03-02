@@ -3,7 +3,7 @@ package server
 import (
 	"log"
 
-	"github.com/ekr-paolo-carraro/todoTest/todo-app/postgres"
+	"github.com/ekr-paolo-carraro/todoTest/Todo-service/postgres"
 )
 
 func Init() {

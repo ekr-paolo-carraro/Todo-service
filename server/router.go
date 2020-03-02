@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/ekr-paolo-carraro/todoTest/todo-app/model"
+	"github.com/ekr-paolo-carraro/todoTest/Todo-service/model"
 	"github.com/gin-gonic/gin"
 )
 

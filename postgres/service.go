@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ekr-paolo-carraro/todoTest/todo-app/model"
+	"github.com/ekr-paolo-carraro/todoTest/Todo-service/model"
 	_ "github.com/lib/pq"
 )
 
