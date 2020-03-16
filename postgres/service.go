@@ -17,8 +17,7 @@ type PersistenceDelegate struct {
 }
 
 func NewTodoDelegate() (*model.TodoDelegate, error) {
-	//connection := "postgresql://serveruser:bFZLUKE8RQ86CTh@35.242.213.160:5432"
-	connection := "host=localhost port=5432 user=srvuser password=ekr dbname=tododb sslmode=disable"
+	connection := "host=localhost port=5432 user=user password=user dbname=tododb sslmode=disable"
 	db, err := sql.Open("postgres", connection)
 
 	if err != nil {
